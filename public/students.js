@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const addStudents = document.getElementById("addStudents");
   const allStudents = document.querySelector("tbody");
 
-  // const getPostForm = document.getElementById("getPostForm");
-  // const singlePost = document.getElementById("singlePost");
   const updateForm = document.getElementById("updateForm");
 
   // Function to fetch and display all students
@@ -17,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       const data = await response.json();
       allStudents.innerHTML = "";
-  
+      
       data.forEach((student) => {
         const tbody = document.createElement("tr");
         tbody.innerHTML += `<tr><td>${scount}</td><td>${student.usn}</td><td>${student.sname}

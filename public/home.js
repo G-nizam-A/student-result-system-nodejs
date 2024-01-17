@@ -43,10 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       const totalMarks = data.length * 100;
-      const obtainedMarks = data.reduce(
-        (sum, subject) => sum + subject.marks_obtained,
-        0
-      );
+      const obtainedMarks = data.reduce((sum, subject) => sum + subject.marks_obtained,0);
+      
       const percentage = (obtainedMarks / totalMarks) * 100;
 
       display[3].textContent = obtainedMarks + "/" + totalMarks;

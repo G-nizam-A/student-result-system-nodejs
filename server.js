@@ -55,6 +55,7 @@ app.post('/students/add', (req, res) => {
         res.json({ message: 'Data inserted successfully' });
     });
 });
+
 app.post('/subjects/add', (req, res) => {
     const { subject_code, subject_name, department } = req.body;
     pool.query('INSERT INTO subjects (subject_code, subject_name, department) VALUES (?, ?, ?)', [subject_code, subject_name, department], (err, results) => {
