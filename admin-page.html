@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <title>Student Result System | Admin</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="authDash.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-swatchbook"></i>
+            <a href="/">N Institution of Technology</a>
+        </div>
+
+        <div class="header-icons adm">
+            <div class="account ">
+                <i class="fa-solid fa-user"></i>
+                <h4>Hello Admin!</h4>
+            </div>
+        </div>
+    </header>
+    <div class="body">
+        <div class="promo_card1">
+            <h1>N Institute of Technology Results</h1>
+        </div>
+        <main class="container">
+            <div class="card">
+                <div class="card_title">
+                    <h1>Admin Login</h1>
+                </div>
+                <div class="form">
+                    <form  onsubmit="validateLogin()" id="validateLogin">
+                        <input type="text" id="username" name="username" placeholder="Enter Username" required>
+                        <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                        <p id="errorMessage"></p>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
+</span>

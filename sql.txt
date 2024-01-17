@@ -1,0 +1,54 @@
+-- Create the database
+CREATE DATABASE IF NOT EXISTS student_db;
+USE student_db;
+
+-- Create a table for storing student details
+CREATE TABLE IF NOT EXISTS students (
+    usn VARCHAR(20) PRIMARY KEY,
+    sname VARCHAR(50) NOT NULL
+);
+
+-- Create a table for storing subject details
+CREATE TABLE IF NOT EXISTS subjects (
+    subject_code VARCHAR(10) PRIMARY KEY,
+    subject_name VARCHAR(100) NOT NULL,
+    department VARCHAR(50) NOT NULL
+);
+
+-- Create a table for storing marks
+CREATE TABLE IF NOT EXISTS marks (
+    mark_id INT PRIMARY KEY AUTO_INCREMENT,
+    usn VARCHAR(20) NOT NULL,
+    subject_code VARCHAR(10) NOT NULL,
+    semester INT NOT NULL,
+    marks_obtained INT NOT NULL,
+    UNIQUE KEY unique_student_subject_semester (usn, subject_code, semester),
+    FOREIGN KEY (usn) REFERENCES students(usn)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    FOREIGN KEY (subject_code) REFERENCES subjects(subject_code)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+);
+
+
+-- Create a procedure to count the number of students and subjects
+DROP PROCEDURE IF EXISTS CountStudentsAndSubjects;
+
+DELIMITER //
+
+CREATE PROCEDURE CountStudentsAndSubjects()
+BEGIN
+    DECLARE studentCount INT;
+    DECLARE subjectCount INT;
+
+    -- Count the number of students
+    SELECT COUNT(*) INTO studentCount FROM students;
+
+    -- Count the number of subjects
+    SELECT COUNT(*) INTO subjectCount FROM subjects;
+
+    -- Display the counts
+    SELECT CONCAT(studentCount) AS StudentCount, CONCAT(subjectCount) AS SubjectCount;
+
+END //

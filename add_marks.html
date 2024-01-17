@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result System | Add Marks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="authAdmin.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-swatchbook"></i>
+            <a href="/">N Institution of Technology</a>
+        </div>
+
+        <div class="header-icons">
+            <div class="account" onclick="logOut()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <h4>LogOut</h4>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <div class="side_navbar">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="add_student.html">Add Student</a>
+                <a href="add_subject.html">Add Subject</a>
+                <a href="#" class="active">Add Marks</a>
+            </div>
+        </nav>
+
+        <div class="main-body">
+            <h2>Student Marks List</h2>
+
+            <div class="lists">
+                <div class="list1">
+                    <div class="row">
+                        <a href="#popup1"><button class="button">Add Marks</button></a>
+                        <!-- <a href="#">See all</a> -->
+                        <div class="search_box">
+                            <input type="text" placeholder="Search...">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                          </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>USN</th>
+                                <th>Subject Code</th>
+                                <th>Sem</th>
+                                <th>Marks Obtained</th>
+                                <th colspan="2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>123</td>
+                                <td>aaaa</td>
+                                <td>123</td>
+                                <td>aaaa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="popup1" class="popup-container">
+                <div class="card">
+                    <div class="card_title">
+                        <h1>Add Marks</h1>
+                    </div>
+                    <div class="form">
+                        <form id="addMarks">
+                            <select name="usn" id="usn" required> 
+                                <option value="" selected disabled>Select USN</option>
+                            </select>
+                            <select name="subject_code" id="subject_code" required> 
+                                <option value="" selected disabled>Select Subject Code</option>
+                            </select>
+                            <select name="semester" id="semester" required> 
+                                <option value="" selected disabled>Select Semester</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <input type="number" max="100" min="0" id="marks_obtained" name="marks_obtained" placeholder="Enter marks obtained" required>
+                            <p id="errorMessage"></p>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="popup2" class="popup-container">
+                <div class="card">
+                    <div class="card_title">
+                        <h1>Update Marks</h1>
+                    </div>
+                    <div class="form">
+                        <form id="updateForm">
+                            <select name="usn" id="uusn" required> 
+                                <option value="" selected disabled>Select USN</option>
+                            </select>
+                            <select name="subject_code" id="usubject_code" required> 
+                                <option value="" selected disabled>Select Subject Code</option>
+                            </select>
+                            <select name="semester" id="usemester" required> 
+                                <option value="" selected disabled>Select Semester</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            </select>
+                            <input type="number" max="100" min="0" id="umarks_obtained" name="marks_obtained" placeholder="Enter marks obtained" required>
+                            <p id="errorMessage"></p>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <script src="app.js"></script>
+    <script src="marks.js"></script>
+</body>
+
+</html>
+</span>

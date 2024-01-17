@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result System | Add Subject</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="authAdmin.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-swatchbook"></i>
+            <a href="/">N Institution of Technology</a>
+        </div>
+
+        <div class="header-icons">
+            <div class="account" onclick="logOut()">
+                <i class="fa-solid fa-right-from-bracket"></i>
+                <h4>LogOut</h4>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <nav>
+            <div class="side_navbar">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="add_student.html">Add Student</a>
+                <a href="#" class="active">Add Subject</a>
+                <a href="add_marks.html">Add Marks</a>
+            </div>
+        </nav>
+
+        <div class="main-body">
+            <h2>Subject List</h2>
+
+            <div class="lists">
+                <div class="list1">
+                    <div class="row">
+                        <a href="#popup1"><button class="button">Add New Subject</button></a>
+                        <!-- <a href="#">See all</a> -->
+                        <div class="search_box">
+                            <input type="text" placeholder="Search...">
+                            <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                          </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Subject Code</th>
+                                <th>Subject Name</th>
+                                <th>Department</th>
+                                <th colspan="2">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>123</td>
+                                <td>aaaa</td>
+                                <td>123</td>
+                                <td>123</td>
+                                <td>aaaa</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div id="popup1" class="popup-container">
+                <div class="card">
+                    <div class="card_title">
+                        <h1>Add Subject</h1>
+                    </div>
+                    <div class="form">
+                        <form id="addSubjects">
+                            <input type="text" id="subject_code" name="subject_code" placeholder="Enter subject code" required>
+                            <input type="text" id="subject_name" name="subject_name" placeholder="Enter subject name" required>
+                            <select name="department" id="department" required> 
+                                <option value="" selected disabled>Select Department</option>
+                                <option value="CSE">CSE</option>
+                                <option value="ISE">ISE</option>
+                                <option value="ME">ME</option>
+                                <option value="CV">CV</option>
+                                <option value="EC">EC</option>
+                            </select>
+                            <p id="errorMessage"></p>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div id="popup2" class="popup-container">
+                <div class="card">
+                    <div class="card_title">
+                        <h1>Update Subject</h1>
+                    </div>
+                    <div class="form">
+                        <form id="updateForm">
+                            <input type="text" id="usubject_code" name="subject_code" placeholder="Enter subject code" required>
+                            <input type="text" id="usubject_name" name="subject_name" placeholder="Enter subject name" required>
+                            <select name="department" id="udepartment" required> 
+                                <option value="" selected disabled>Select Department</option>
+                                <option value="CSE">CSE</option>
+                                <option value="ISE">ISE</option>
+                                <option value="ME">ME</option>
+                                <option value="CV">CV</option>
+                                <option value="EC">EC</option>
+                            </select>
+                            <p id="errorMessage"></p>
+                            <input type="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="subjects.js"></script>
+</body>
+
+</html>
+</span>

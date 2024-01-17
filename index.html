@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Student Result System | Home</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <i class="fa-solid fa-swatchbook"></i>
+            <a href="/">N Institution of Technology</a>
+        </div>
+
+        <div class="header-icons">
+            <a href="admin-page.html" class="account">
+                <i class="fa-solid fa-user"></i>
+                <h4>Login</h4>
+            </a>
+        </div>
+    </header>
+    <div class="body">
+        <div class="promo_card1">
+            <h1>N Institute of Technology Results</h1>
+        </div>
+        <main class="container">
+            <div class="card">
+                <div class="card_title">
+                    <h1>Examination Results</h1>
+                </div>
+                <div class="form">
+                    <form id="searchResult">
+                        <input type="text" id="usn" name="usn" placeholder="Enter USN" />
+                        <select name="semester" id="semester" required>
+                            <option value="" selected disabled>Select Semester</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </main>
+        <div id="popup1" class="popup-container">
+            <div class="card">
+                <div class="card_title">
+                    <h2>Result</h2>
+                </div>
+                <div class="bb">
+                    <div>
+                        <h5>Name: <span></span></h5>
+                    </div>
+                    <div  class="st_list">
+                        <h5>USN: <span></span></h5>
+                        <h5>SEM: <span></span></h5>
+                    </div>
+                </div>
+                <div class="lists">
+                    <div class="list1">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Subject Code</th>
+                                    <th>Subject Name</th>
+                                    <th>Marks</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>123</td>
+                                    <td>aaaa</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td colspan="3"><span></span></td>
+                                <tr>
+                                    <td colspan="3"><span></span></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="home.js"></script>
+
+</body>
+
+</html>
